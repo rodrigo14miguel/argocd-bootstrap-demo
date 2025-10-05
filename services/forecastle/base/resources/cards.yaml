@@ -1,0 +1,30 @@
+---
+apiVersion: forecastle.stakater.com/v1alpha1
+kind: ForecastleApp
+metadata:
+  name: argocd
+  namespace: forecastle
+spec:
+  name: ArgoCD
+  group: CI/CD
+  icon: https://icon.icepanel.io/Technology/svg/Argo-CD.svg
+  url: https://localhost:8443
+  networkRestricted: false
+  properties:
+    Description: "K8s native CD tool"
+  instance: "my-instance"
+---
+apiVersion: forecastle.stakater.com/v1alpha1
+kind: ForecastleApp
+metadata:
+  name: google
+  namespace: forecastle
+spec:
+  name: Google
+  group: "External Links"
+  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png
+  url: http://www.google.com
+  networkRestricted: false
+  properties:
+    Description: "Google link"
+  instance: "my-instance"

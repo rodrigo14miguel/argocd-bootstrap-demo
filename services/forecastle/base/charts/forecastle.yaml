@@ -1,0 +1,18 @@
+apiVersion: builtin
+kind: HelmChartInflationGenerator
+metadata:
+  name: my-forecastle
+name: forecastle
+namespace: forecastle
+version: 1.0.159
+repo: https://stakater.github.io/stakater-charts
+includeCRDs: true
+valuesInline:
+  forecastle:
+    config:
+      title: my-title
+      instanceName: my-instance
+      namespaceSelector:
+        matchNames:
+          - forecastle
+      crdEnabled: true

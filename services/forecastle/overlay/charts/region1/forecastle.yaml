@@ -1,0 +1,9 @@
+apiVersion: builtin
+kind: HelmChartInflationGenerator
+metadata:
+  name: my-forecastle
+valuesInline:
+  forecastle:
+    deployment:
+     replicas: 2
+
