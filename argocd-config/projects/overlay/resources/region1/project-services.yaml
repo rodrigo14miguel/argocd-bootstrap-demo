@@ -1,16 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: infra
+  name: services
   namespace: argocd
 spec:
   clusterResourceWhitelist:
   - group: '*'
     kind: '*'
-  destination:
+  destinations:
   - name: in-cluster
-    namespace: argocd
-    server: https://kubernetes.default.svc
+    namespace: forecastle
+  namespaceResourceWhitelist:
+  - group: '*'
+    kind: '*'
   sourceRepos:
   - '*'
   syncWindows:
@@ -21,7 +23,5 @@ spec:
     duration: 1h
     kind: allow
     manualSync: true
-    namespaces:
-    - 'forecastle'
     schedule: '* 8-17 * * *'
     timeZone: Europe/Lisbon
