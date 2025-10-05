@@ -1,0 +1,13 @@
+apiVersion: builtin
+kind: HelmChartInflationGenerator
+metadata:
+  name: metrics-server
+name: metrics-server
+namespace: metrics-server
+version: 3.13.0
+repo: https://kubernetes-sigs.github.io/metrics-server/
+includeCRDs: true
+valuesInline:
+  fullnameOverride: metrics-server
+  apiService:
+    create: true
