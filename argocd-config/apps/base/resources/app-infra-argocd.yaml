@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: infra.argocd
+  namespace: argocd
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: infra
+  source:
+    path: infra/argocd/overlay/resources/REGION
+    repoURL:
+    targetRevision: BRANCH
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true

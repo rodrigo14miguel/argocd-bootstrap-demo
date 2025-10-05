@@ -1,0 +1,10 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: infra.metrics-server
+  namespace: argocd
+spec:
+  source:
+    path: infra/metrics-server/overlay/charts/inflator/region1
+    repoURL:
+    targetRevision: main

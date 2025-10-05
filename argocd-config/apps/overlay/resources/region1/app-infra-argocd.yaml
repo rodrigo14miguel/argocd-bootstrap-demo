@@ -1,0 +1,10 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: infra.argocd
+  namespace: argocd
+spec:
+  source:
+    path: infra/argocd/overlay/resources/region1
+    repoURL:
+    targetRevision: main
