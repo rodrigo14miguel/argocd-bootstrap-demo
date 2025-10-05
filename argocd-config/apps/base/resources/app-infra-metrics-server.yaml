@@ -10,7 +10,7 @@ spec:
   project: infra
   source:
     path: infra/metrics-server/overlay/charts/inflator/REGION
-    repoURL:
+    repoURL: https://github.com/rodrigo14miguel/argocd-bootstrap-demo.git
     targetRevision: BRANCH
   syncPolicy:
     automated:

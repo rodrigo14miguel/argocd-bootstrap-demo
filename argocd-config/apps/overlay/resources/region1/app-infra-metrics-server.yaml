@@ -6,5 +6,5 @@ metadata:
 spec:
   source:
     path: infra/metrics-server/overlay/charts/inflator/region1
-    repoURL:
+    repoURL: https://github.com/rodrigo14miguel/argocd-bootstrap-demo.git
     targetRevision: main

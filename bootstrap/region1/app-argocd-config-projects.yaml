@@ -10,7 +10,7 @@ spec:
   project: infra
   source:
     path: argocd-config/projects/overlay/resources/region1
-    repoURL:
+    repoURL: https://github.com/rodrigo14miguel/argocd-bootstrap-demo.git
     targetRevision: main
   syncPolicy:
     automated:
